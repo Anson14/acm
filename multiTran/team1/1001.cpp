@@ -22,7 +22,7 @@ int main() {
     int n;
     int i = 1;
     while (cin>> n) {
-        int a = n*0.30102/1;
+        int a = (int)floor(n*log10((long double)2));
 
         cout<<"Case #"<< i++<< ": "<< a<< endl;
     }

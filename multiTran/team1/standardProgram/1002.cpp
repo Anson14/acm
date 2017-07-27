@@ -26,7 +26,7 @@ void work() {
     memset(ban , 0 , sizeof(ban));
     memset(sum , 0 , sizeof(sum));
     L = 0;
-    for (int i = 0 ; i < n ; ++ i) {
+    for (int i = 0 ; i < n ; ++i) {
         scanf("%s" , str);
         int len = strlen(str);
         if (len > 1) {
@@ -44,6 +44,7 @@ void work() {
     }
     for (int i = 0 ; i < 26 ; ++ i) {
         for (int j = 0 ; j < L ; ++ j) {
+            //进位
             num[i][j + 1] += num[i][j] / 26;
             num[i][j] %= 26;
         }
@@ -57,6 +58,7 @@ void work() {
     int zero = -1;
     for (int i = 0 ; i < 26 ; ++ i) {
         if (!ban[a[i]]) {
+            //把a[i]安排为0
             zero = a[i];
             break;
         }
@@ -75,6 +77,7 @@ void work() {
 int main() {
     power[0] = 1;
     for (int i = 1 ; i < N ; ++ i) {
+        //打表？
         power[i] = (LL)power[i - 1] * 26 % Q;
     }
     while (~scanf("%d" , &n)) {

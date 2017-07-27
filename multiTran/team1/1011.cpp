@@ -25,27 +25,18 @@ int fun(char a) {
     return (int)(a-'a');
 }
 
-int main() {
-    ios::sync_with_stdio(false);
-    freopen("1011.in", "r", stdin);
-    int ca = 1;
-    while (cin >> k){
-        clr(a);
-        val = 0;
-        for (int i = 0; i < k; i++) {
-            cin>> s[i];
-            for (int j = s[i].length()-1; j >= 0; j--) {
-                int m = s[i].length()-j-1;
-                while(m--) {
-                    a[fun(s[i][j])] *= 26;
-                    if (fun(s[i][j]) > 1000000007) {
-                        a[fun(s[i][j])] %= 1000000007;
-                    }
-                }
-            }
-        }
 
-        cout<< "Case #"<< ca++<< ": "<< val<< endl;
-    }
-    return 0;
+int main(){
+	int n, ca = 0; LL k;
+	while(~scanf("%d%lld", &n, &k)){
+		if(k <= n) printf("Case #%d: %lld\n", ++ca, k);
+		else{
+			k -= n;
+			LL t = k / (n - 1);
+			k %= n - 1;
+			if(!k) printf("Case #%d: %d\n", ++ca, t & 1 ? n - 1 : n);
+			else printf("Case #%d: %lld\n", ++ca, k);
+		}
+	}
+  return 0;
 }
