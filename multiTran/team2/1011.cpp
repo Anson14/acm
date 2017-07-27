@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string>
 #include <cstring>
-#include <math.h>
+#include <cmath>
 #include <algorithm>
 //#include <bits/stdc++.h>
 #define LL long long
