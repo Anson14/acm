@@ -1,16 +1,21 @@
-/*
-Problem: JZOJ1598(询问一个字符串中有多少至少出现两次的子串)
-Content: SA's Code and Explanation
-Author : YxuanwKeith
-*/
+/*************************************************************************
+    > File Name: a.cpp
+  > Author: Anson
+  > Mail: 354830997@qq.com
+  > Created Time: 2017年07月31日 星期一 21时31分29秒
+ ************************************************************************/
 
-#include <cstdio>
+#include <iostream>
+#include <stdio.h>
+#include <string>
 #include <cstring>
+#include <math.h>
 #include <algorithm>
-
+//#include <bits/stdc++.h>
+#define LL long long
+#define clr(x) memset(x,0,sizeof(x))
 using namespace std;
-
-const int MAXN = 100005;
+#define MAXN 1005
 
 char ch[MAXN], All[MAXN];
 int SA[MAXN], ranks[MAXN], Height[MAXN], tax[MAXN], tp[MAXN], a[MAXN], n, m;
@@ -57,40 +62,46 @@ void Suffix() {
 }
 
 void Init() {
-    scanf("%s", str);
     n = strlen(str);
     for (int i = 0; i < n; i ++) a[i + 1] = str[i];
 }
 
-int solve() {
-    Init();
-    Suffix();
-    int len = strlen(str);
-    for (int i = 0; i < len; i++) {
-        printf("%d ", SA[i]);
-    }
-    int num = len*(len+1)/2;
-    int ha = 0;
-    for (int i = 0; i < len; i++) {
-        ha += Height[i];
-        printf("  %d\n", Height[i]);
-    }
-    printf("%d  %d\n", num-ha, ha);
-    return 0;
-}
-
 int main() {
-    int t;
-    //freopen("in.txt", "r", stdin);
-    scanf("%d", &t);
-    while (t--) {
-        //scanf("%s", str);
-        solve();
+    ios::sync_with_stdio(false);
+    freopen("in.txt", "r", stdin);
+    int N = 0;
+    while (~scanf("%d", &N) && N != 0) {
+        for (int i = 0; i < N; i++)     {
+            scanf("%s", &str[i]);
+        }
+        Init();
+        Suffix();
+        bool flag = 0;
+        for (int i = 1; i <= N; i++) {
+            printf("%d ", Height[i]);
+        }
+        int l = 4, r = N;
+        int mid = (l+r)/2;
+        while (l < r) {
+            //printf("%d\n", mid);
+            for (int i = 1; i <= N; i++) {
+                if (Height[i] >= mid) {
+                    if (SA[i]-SA[i-1] >= mid) {
+                        l = mid;
+                        mid = (l+r)/2;
+                        flag = 1;
+                        break;
+                    }
+                }
+            }
+            r = mid;
+            mid = (l+r)/2;
+        }
+        if (flag)
+            printf("%d\n", mid+1);
+        else 
+            printf("0\n");
     }
-    //Init();
-    //Suffix();
 
-    //int ans = Height[2];
-    //for (int i = 3; i <= n; i ++) ans += max(Height[i] - Height[i - 1], 0);
-    //printf("%d\n", ans);
+    return 0;
 }
