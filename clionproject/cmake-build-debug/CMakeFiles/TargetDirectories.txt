@@ -1,0 +1,3 @@
+/home/anson/Documents/code/c/acm/clionproject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/anson/Documents/code/c/acm/clionproject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/anson/Documents/code/c/acm/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir

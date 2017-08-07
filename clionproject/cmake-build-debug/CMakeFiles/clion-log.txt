@@ -1,0 +1,15 @@
+/home/anson/Downloads/clion-2017.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/anson/Documents/code/c/acm/clionproject
+-- Configuring done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Cannot find source file:
+
+    hello.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: clionproject
+CMake Error: Cannot determine link language for target "clionproject".
+-- Generating done
+-- Build files have been written to: /home/anson/Documents/code/c/acm/clionproject/cmake-build-debug
