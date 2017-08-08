@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anson/Documents/code/c/acm/clionproject/main.cpp
+iostream
+-
+stdio.h
+-
+string
+-
+cstring
+-
+math.h
+-
+algorithm
+-
+
