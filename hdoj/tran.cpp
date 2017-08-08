@@ -17,8 +17,36 @@
 using namespace std;
 #define MAXN 1005
 
+struct a {
+    int n;
+} ss;
+
 int main() {
     ios::sync_with_stdio(false);
+    int a, b;
+    //cin>> a;
 
+    
+    int ca = 0;
+    cin >> ca;
+    while (cin >> a) {
+        //if (a == 0 && b == 0) {
+        //reak;
+        //}
+        //if (a == 0) {
+        //break;
+        //}
+        int sum = 0;
+        for (int i = 0; i < a; i++) {
+            cin >> b;
+            sum += b;
+        }
+
+        cout <<  sum << endl;
+        if (ca != 1) {
+            cout << endl;
+            ca--;
+        }
+    }
     return 0;
 }
