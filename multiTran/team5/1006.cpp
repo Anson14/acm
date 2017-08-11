@@ -22,7 +22,7 @@ LL m, ans, temp;
 
 int main() {
     ios::sync_with_stdio(false);
-    freopen("in.txt", "r", stdin);
+    //freopen("in.txt", "r", stdin);
     scanf("%d", &t);
     while (t--) {
         scanf("%d %lld", &n, &m);
