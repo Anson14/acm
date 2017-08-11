@@ -60,6 +60,7 @@ P divide(P a,P b){
 
 int main(){
     int T;
+    freopen("../in.txt", "r", stdin);
     scanf("%d",&T);
     rep(i,0,T){
         db r;scanf("%lf",&r);
