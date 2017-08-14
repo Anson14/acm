@@ -1,0 +1,100 @@
+//This is my setting.json for vscode
+//This setting can make me do my work whih full speed
+
+
+//The list for Plugin I has install
+//1.astyle
+//2.c/c++
+//3.c/c++ clang comment adapter
+//4.c++ intellisense
+//5.clangComplete
+//6.code runner
+//7.data&time
+//8.fileHeaderComment
+//9.includeAutocomplete
+//10.vim
+
+
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "editor.fontFamily": "'Monaco'",
+    "editor.fontSize": 17,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "astyle.cmd_options": [
+        "--style=java"
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        }
+    ],
+    // "vim.leader": "<space>",
+    "vim.handleKeys":{
+        // "<C-a>": false,
+        // "<C-f>": false
+    },
+    "code-runner.runInTerminal": true,
+    "files.autoSave": "onFocusChange",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.cursorBlinking": "solid",
+    "fileHeaderComment.template": {
+        "*": [
+"/*************************************************************************",
+  "> Author: AnsonTang",
+  "> Mail: 354830997@qq.com",
+  "> Created Time: ${year} ${datetime24h}",
+ "************************************************************************/",
+"",
+"#include <iostream>",
+"#include <cstdio>",
+"#include <string>",
+"#include <cstring>",
+"#include <cmath>",
+"#include <algorithm>",
+"#include <bits/stdc++.h>",
+"#define LL long long",
+"#define clr(x) memset(x,0,sizeof(x))",
+"using namespace std;",
+"#define MAXN 100005",
+"",
+
+"int main() {",
+"    ios::sync_with_stdio(false);",
+"    freopen(\"in.txt\", \"r\", stdin);",
+"",
+"    return 0;",
+"}"
+        ]   
+    },
+    "editor.insertSpaces": false,
+    "editor.autoIndent": true,
+    "editor.tabCompletion": true,
+    "git.enableSmartCommit": true,
+    "clang.diagnostic.delay": 20,
+    "workbench.iconTheme": "seti",
+    "C_Cpp.autocomplete": "Disabled",
+    "clang.cxxflags": [
+        "-std=c++11"
+    ],
+    "editor.cursorStyle": "block-outline"
+}
