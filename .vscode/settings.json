@@ -1,9 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "files.associations": {
-        "algorithm": "cpp",
-        "limits": "cpp",
-        "iostream": "cpp",
-        "cstdio": "cpp"
-    }
-}
