@@ -57,7 +57,7 @@ int main() {
         } else if (isBig(y-2)) {
             printf("%d\n", y+6);
         } else if (isBig(y-3)) {
-            printf("%d\n", y+11);
+            printf("%d\n", y+5);
         }
     }
 
