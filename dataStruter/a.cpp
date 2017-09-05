@@ -19,9 +19,8 @@ using namespace std;
 
 struct Node {
     LL weigth;
-    //vector <int> child;
     int father;
-    int deep;
+    int deep = 0;
 } nodes[MAXN];
 int n, m;
 struct Edge {
@@ -65,27 +64,41 @@ void solve() {
 
 int main() {
     ios::sync_with_stdio(false);
-    //freopen("in.txt", "r", stdin);
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
-        cin >> nodes[i].weigth;
+    freopen("in.txt", "r", stdin);
+    while (cin >> n >> m) {
+        for (int i = 1; i <= n; i++) {
+            cin >> nodes[i].weigth;
+        }
+        nodes[1].deep = 1;
+        for (int i = 1; i < n; i++) {
+            int a, b;
+            cin >> a >> b;
+            //nodes[a].child.push_back(b);
+            edge[i].mi = a;
+            edge[i].ma = b;
+        }
+        sort(edge + 1, edge + n);
+        bool flag = false;
+        int temp = 0;
+        for (int i = 1; i < n; i++) {
+            if (edge[i].ma == 0) {
+                continue;
+            }
+            if (nodes[edge[i].mi].deep == 0) {
+                flag = true;
+                temp = i;
+                continue;
+            }
+            nodes[edge[i].ma].father = edge[i].mi;
+            nodes[edge[i].ma].deep = nodes[edge[i].mi].deep + 1;
+            if (flag) {
+                flag = false;
+                edge[i].ma = 0;
+                i = temp - 1;
+            }
+        }
+        solve();
     }
-    nodes[1].deep = 1;
-    for (int i = 1; i < n; i++) {
-        int a, b;
-        cin >> a >> b;
-        //nodes[a].child.push_back(b);
-        if (a > b)
-            swap(a, b);
-        edge[i].mi = a;
-        edge[i].ma = b;
-    }
-    sort(edge + 1, edge + n);
-    for (int i = 1; i < n; i++) {
-        nodes[edge[i].ma].father = edge[i].mi;
-        nodes[edge[i].ma].deep = nodes[edge[i].mi].deep + 1;
-    }
-    solve();
 
 
     return 0;
