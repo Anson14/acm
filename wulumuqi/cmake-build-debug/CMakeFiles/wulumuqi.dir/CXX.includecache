@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anson/Documents/code/c/acm/wulumuqi/main.cpp
+iostream
+-
+stdio.h
+-
+string
+-
+cstring
+-
+math.h
+-
+algorithm
+-
+bits/stdc++.h
+-
+

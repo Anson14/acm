@@ -108,7 +108,7 @@ void updateOne(int node, int index, int addVal) {
 }
 
 int main() {
-    ios::sync_with_stdio(false);
+//    ios::sync_with_stdio(false);
     freopen("in.txt", "r", stdin);
     int T = 0;
     int n = 0;
